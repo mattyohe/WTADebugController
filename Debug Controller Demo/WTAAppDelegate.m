@@ -7,6 +7,14 @@
 //
 
 #import "WTAAppDelegate.h"
+#warning Import the WTADebugWindowController into something like the app delegate
+#import "WTADebugWindowController.h"
+#import "OverlayViewController.h"
+
+@interface WTAAppDelegate ()
+#warning Have a property or instance variable that can hold onto your debug controller
+@property (nonatomic, strong) WTADebugWindowController *debugController;
+@end
 
 @implementation WTAAppDelegate
 
@@ -42,5 +50,21 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#warning Envoke the debug controller by the shake gesture. (Simulator keyboard shortcut: ^⌘Z )
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if ([event subtype] == UIEventSubtypeMotionShake) {
+        if ([self debugController] == nil) {
+            [self setDebugController:[WTADebugWindowController new]];
+            [[self debugController] setDebugViewController:[OverlayViewController new]];
+        }
+        
+        [[self debugController] isActive] ? [[self debugController] deactivateDebugger] : [[self debugController] activateDebugger];
+        
+    }
+}
+
 
 @end

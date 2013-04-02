@@ -18,6 +18,9 @@
 		B5D1732B170B86D7004D2B97 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D1732A170B86D7004D2B97 /* Default-568h@2x.png */; };
 		B5D1732E170B86D7004D2B97 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D1732C170B86D7004D2B97 /* MainStoryboard.storyboard */; };
 		B5D17331170B86D7004D2B97 /* WTAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D17330170B86D7004D2B97 /* WTAViewController.m */; };
+		B5D17339170B8733004D2B97 /* WTADebugWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D17338170B8733004D2B97 /* WTADebugWindowController.m */; };
+		B5D1733D170B8809004D2B97 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1733B170B8809004D2B97 /* OverlayViewController.m */; };
+		B5D1733E170B8809004D2B97 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D1733C170B8809004D2B97 /* OverlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		B5D1732D170B86D7004D2B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B5D1732F170B86D7004D2B97 /* WTAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAViewController.h; sourceTree = "<group>"; };
 		B5D17330170B86D7004D2B97 /* WTAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAViewController.m; sourceTree = "<group>"; };
+		B5D17337170B8733004D2B97 /* WTADebugWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTADebugWindowController.h; path = Classes/WTADebugWindowController.h; sourceTree = "<group>"; };
+		B5D17338170B8733004D2B97 /* WTADebugWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTADebugWindowController.m; path = Classes/WTADebugWindowController.m; sourceTree = "<group>"; };
+		B5D1733A170B8809004D2B97 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
+		B5D1733B170B8809004D2B97 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
+		B5D1733C170B8809004D2B97 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,8 @@
 		B5D1731A170B86D7004D2B97 /* Debug Controller Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B5D1733F170B8BAF004D2B97 /* Debug Controller */,
+				B5D17340170B8BBD004D2B97 /* Overlay Controller */,
 				B5D17323170B86D7004D2B97 /* WTAAppDelegate.h */,
 				B5D17324170B86D7004D2B97 /* WTAAppDelegate.m */,
 				B5D1732C170B86D7004D2B97 /* MainStoryboard.storyboard */,
@@ -105,6 +115,25 @@
 				B5D1732A170B86D7004D2B97 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5D1733F170B8BAF004D2B97 /* Debug Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D17337170B8733004D2B97 /* WTADebugWindowController.h */,
+				B5D17338170B8733004D2B97 /* WTADebugWindowController.m */,
+			);
+			name = "Debug Controller";
+			sourceTree = "<group>";
+		};
+		B5D17340170B8BBD004D2B97 /* Overlay Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1733A170B8809004D2B97 /* OverlayViewController.h */,
+				B5D1733B170B8809004D2B97 /* OverlayViewController.m */,
+				B5D1733C170B8809004D2B97 /* OverlayViewController.xib */,
+			);
+			name = "Overlay Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +193,7 @@
 				B5D17329170B86D7004D2B97 /* Default@2x.png in Resources */,
 				B5D1732B170B86D7004D2B97 /* Default-568h@2x.png in Resources */,
 				B5D1732E170B86D7004D2B97 /* MainStoryboard.storyboard in Resources */,
+				B5D1733E170B8809004D2B97 /* OverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +207,8 @@
 				B5D17321170B86D7004D2B97 /* main.m in Sources */,
 				B5D17325170B86D7004D2B97 /* WTAAppDelegate.m in Sources */,
 				B5D17331170B86D7004D2B97 /* WTAViewController.m in Sources */,
+				B5D17339170B8733004D2B97 /* WTADebugWindowController.m in Sources */,
+				B5D1733D170B8809004D2B97 /* OverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
